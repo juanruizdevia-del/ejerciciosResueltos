@@ -55,3 +55,5 @@ numero = prompt('Escribe de nuevo un numero ')
 for (i = 1; i <= numero; i++) {
      console.log(i);
 }
+
+
