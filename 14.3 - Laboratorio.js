@@ -41,4 +41,3 @@ function validarContraseña(contraseña) {
     return true    
 }
 console.log(validarContraseña(contraseña));
-
