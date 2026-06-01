@@ -1,5 +1,10 @@
 // Clases Usuario, UsuarioVIP
 
+export {
+    Usuario,
+    UsuarioVIP
+}
+
 class Usuario {
     static listaUsuarios = [];
     constructor(nombre, email, rol = 'cliente') {
@@ -49,11 +54,6 @@ class UsuarioVIP extends Usuario {
         }
     }
 
-}
-
-export default {
-    Usuario,
-    UsuarioVIP
 }
 
 

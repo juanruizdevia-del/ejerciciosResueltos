@@ -1,10 +1,17 @@
 // Clase Producto.
 
+export {
+    Producto,
+    ProductoDigital
+};
+
 class Producto {
+    static listaProductos = [];
     constructor(nombre, precio, categoria) {
         this.nombre = nombre;
         this.precio = precio;
         this.categoria = categoria;
+        Producto.listaProductos.push(this);
     }
 
     calcularTotal() {
@@ -24,7 +31,7 @@ class Producto {
     targeta() {
         console.log(`Nombre De Producto: ${this.nombre} | Categoria: ${this.categoria} | Precio con IVA: ${this.calcularTotal()}`);
     }
-}
+};
 
 class ProductoDigital extends Producto{
     constructor(nombre,precio,licencia){
@@ -40,4 +47,4 @@ class ProductoDigital extends Producto{
         super.targeta();
         console.log(`Tipo de licencia: ${this.licencia}`);
     }
-}
+};
