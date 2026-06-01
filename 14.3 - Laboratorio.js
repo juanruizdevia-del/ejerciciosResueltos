@@ -22,7 +22,11 @@ const prompt = require('prompt-sync')();
 let contraseña = prompt('Ingrese una contraseña ');
 
 function validarContraseña(contraseña) {
-    let arrayCaracteres = [];
+    let caracteres = [];
+
+    for(caracter of contraseña){
+        caracteres.push(caracter)
+    };
 
     if (contraseña.length <= 8) {
         return false
@@ -34,7 +38,7 @@ function validarContraseña(contraseña) {
         }
     }
 
-    return true
+    return true    
 }
 console.log(validarContraseña(contraseña));
 
