@@ -1,3 +1,5 @@
+// Ejercicio 1
+
 let nomina = [];
 
 class Empleado {
