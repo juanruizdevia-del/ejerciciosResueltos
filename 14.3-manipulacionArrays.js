@@ -19,25 +19,28 @@ const prompt = require('prompt-sync')();
 
 // EJERCICIO 2 - Contraseña
 
-let contraseña = prompt('Ingrese una contraseña ');
+// let contraseña = prompt('Ingrese una contraseña: ');
 
-function validarContraseña(contraseña) {
-    let caracteres = [];
+// function validarContraseña(contraseña) {
+//     if (contraseña.length < 8) {
+//         return false;
+//     };
 
-    for(caracter of contraseña){
-        caracteres.push(caracter)
-    };
+//     let hayNumero = false;
+//     let hayMayus = false;
 
-    if (contraseña.length <= 8) {
-        return false
-    }
+//     for (let caracter of contraseña) {
 
-    for (const caracter of contraseña) {
-        if(caracter <= 9){
-            return false
-        }
-    }
+//         if (!isNaN(caracter)) {
+//             hayNumero = true;
+//         }
 
-    return true    
-}
-console.log(validarContraseña(contraseña));
+//         if (caracter === caracter.toUpperCase() && caracter !== caracter.toLowerCase()) {
+//             hayMayus = true;
+//         }
+//     };
+
+//     return hayNumero && hayMayus;
+// }
+
+// console.log(validarContraseña(contraseña));

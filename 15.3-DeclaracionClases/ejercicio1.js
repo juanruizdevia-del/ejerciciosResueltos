@@ -54,7 +54,7 @@ class Lider extends Empleado{
 
 class Lider extends Empleado {
     constructor(nombre, salario, equipo = []) {
-        super(nombre, 'lider de equipo',salario);
+        super(nombre, 'lider de equipo', salario);
         this.equipo = equipo;
     }
 
@@ -66,7 +66,7 @@ class Lider extends Empleado {
         this.equipo.push(Empleado.listaEmpleados[posicion].nombre);
     }
 
-    info(){
+    info() {
         super.info();
         console.log(`
         Numero de Integrantes de equipo: ${this.equipo.length};
@@ -74,11 +74,26 @@ class Lider extends Empleado {
     }
 }
 
-liderUno = new Lider('Jose',400000);
-liderDos = new Lider('Maria',800000000)
+liderUno = new Lider('Jose', 400000);
+liderDos = new Lider('Maria', 80000)
 
-console.log(Empleado.listaEmpleados);
+function totalNomina() {
+    let nominaTotal = 0;
+    
+    for (let empleado of Empleado.listaEmpleados) {
+        nominaTotal += empleado.salario; 
+    }
+    return {
+        mensual: nominaTotal,
+        anual: () => nominaTotal * 12
+    };
+}
 
-console.log(liderUno.info());
+console.log(`El total de la nomina de todos los empleados es ${totalNomina().mensual}. Anual: ${totalNomina().anual()}`);
 
+empleadoUno.desactivar();
+empleadoUno.info();
 
+liderUno.agregarMiembro(0);
+liderUno.info();
+liderUno.presentarEquipo();
