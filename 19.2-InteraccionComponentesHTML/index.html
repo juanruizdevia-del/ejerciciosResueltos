@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <p>Escribe una nueva tarea</p>
+        <input type="text" id="description">
+        <select name="option" id="selector">
+            <option value="study">Seleccione</option>
+            <option value="work">trabajo</option>
+            <option value="study">Estudio</option>
+            <option value="personal">Personal</option>
+            <option value="urgent">Urgente</option>
+        </select>
+        <button>Enviar</button>
+    </div>
+    <div id="task-container">
+        <p>Lista de tareas</p>
+        <div id="counter-container">
+            <p>Total de tareas: <span id="total-tasks">0</span></p>
+            <p>Tareas completadas: <span id="total-tasks">0</span></p>
+        </div>
+
+        <div id="task-list">
+            <h1>aqui van las tareas</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
