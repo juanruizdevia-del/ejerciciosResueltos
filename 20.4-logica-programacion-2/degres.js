@@ -1,6 +1,4 @@
-
-import promptSync from 'prompt-sync';
-const prompt = promptSync();
+const prompt = require('prompt-sync')();
 
 function getCelsius() {
     let celsius = prompt('Escriba temperatura en grados Celsius: >');
@@ -25,9 +23,4 @@ function run() {
     ;
 }
 
-export{
-    getCelsius,
-    kelvin,
-    fahrenheit,
-    run
-}
+run();
