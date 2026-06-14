@@ -6,85 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20250202/original/pngtree-shopping-icon-pictures-png-image_5461715.png">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
 
     <title>U-Store</title>
 </head>
 
 <body>
+    <!-- Nav -->
     <header>
         <nav>
             <h1 id="logo">U store</h1>
             <h1 id="badge">0</h1>
         </nav>
     </header>
+    <!-- lista de productos -->
     <section>
-        <div class="cards-container">
-            <!-- Grid Bootstrap -->
-
-            <!-- Firts row -->
-            <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                    <div class="card">
+        <div class="container my-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Tarjeta 1 -->
+                <div class="col">
+                    <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Nombre
-                            </h5>
-                            <p class="card-text">
-                                precio
-                            </p>
-                            <a href="#" class="btn btn-primary add" class="btn-add">Agregar</a>
+                            <h5 class="card-title">Camiseta Azul</h5>
+                            <p class="card-text">$25.000</p>
+                            <button class="btn-agregar btn btn-primary" data-nombre="Camiseta Azul" data-precio="25000">
+                                Agregar al carrito
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card">
+                <!-- Tarjeta 2 -->
+                <div class="col">
+                    <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Nombre
-                            </h5>
-                            <p class="card-text">
-                                Precio
-                            </p>
-                            <a href="#" class="btn btn-primary" class="btn-add">Agregar</a>
+                            <h5 class="card-title">Pantalón Negro</h5>
+                            <p class="card-text">$45.000</p>
+                            <button class="btn-agregar btn btn-primary" data-nombre="Pantalón Negro" data-precio="45000">
+                                Agregar al carrito
+                            </button>
                         </div>
                     </div>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Zapatillas Running</h5>
+                            <p class="card-text">$85.000</p>
+                            <button class="btn-agregar btn btn-primary" data-nombre="Zapatillas Running" data-precio="85000">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Gorra Deportiva</h5>
+                            <p class="card-text">$15.000</p>
+                            <button class="btn-agregar btn btn-primary" data-nombre="Gorra Deportiva" data-precio="15000">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- carro de compra y vaciar carrito -->
+    <section>
+    <div class="container my-3">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="d-flex align-items-center gap-3">
+                    <button type="text" class="btn btn-primary position-relative">
+                        Carrito de compras
+                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden"></span>
+                        </span>
+                    </button>
+                    <p class="m-0 font-monospace">Total productos: <span id="total"></span></p>
                 </div>
             </div>
-            <br>
+            <div class="col text-end">
+                <button type="button" class="btn btn-primary position-relative">
+                    Vaciar Carrito
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Second row -->
+    <!-- lista de carrito -->
+    <section>
+       <div class="container mt-3 mb-3 h-100 border border-secondary rounded p-3">
             <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Nombre
-                            </h5>
-                            <p class="card-text">
-                                precio
-                            </p>
-                            <a href="#" class="btn btn-primary" class="btn-add">Agregar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Nombre
-                            </h5>
-                            <p class="card-text">
-                                Precio
-                            </p>
-                            <a href="#" class="btn btn-primary" class="btn-add">Agregar</a>
-                        </div>
-                    </div>
+                <div class="col">
+                    <ul id="lista-carrito">
+                        <!-- Aqui se añaden los li creados -->
+                    </ul>
                 </div>
             </div>
-            <br>
-
         </div>
     </section>
     <footer>
