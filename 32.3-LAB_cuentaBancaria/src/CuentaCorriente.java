@@ -15,7 +15,7 @@ public class CuentaCorriente extends CuentaBancaria{
     public CuentaCorriente(String numeroCuenta, String titular, double saldo) {
         super(numeroCuenta, titular, saldo, 0.0);
         this.limiteSobregiro = 50000;
-        this.porcentajeComisionSobregiro = 5;
+        this.porcentajeComisionSobregiro = 0.05;
     }
 
 

@@ -59,6 +59,8 @@ public abstract class CuentaBancaria {
         double interes = saldo * (tasaInteres * 0.01);
         System.out.println("total de intereses del saldo actual: " + interes);
         System.out.println("Total del saldo actual: $" + getSaldo());
+        setSaldo(getSaldo() + interes);
+        System.out.println("Total con intereses aplicados: " + getSaldo());
     }
 
     public void mostrarInfo (){
