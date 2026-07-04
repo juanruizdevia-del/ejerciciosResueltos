@@ -40,8 +40,8 @@ public class Agenda {
             System.out.println("La agenda está vacía.");
             return;
         }
-        for (Contacto c : listaContactosOrdenada) {
-            System.out.println(c);
+        for (Contacto contacto : listaContactosOrdenada) {
+            System.out.println(contacto);
         }
     }
 
@@ -77,8 +77,10 @@ public class Agenda {
             return;
         }
 
-        System.out.println("Contacto asignado al grupo: " + nombreGrupo);
+        contacto.setGrupo(nombreGrupo);
+        System.out.println(nombreContacto + " asignado con éxito al grupo: " + nombreGrupo);
     }
+
 
     public void mostrarContactosPorGrupo(String nombreGrupo) {
         if (!gruposContactos.contains(nombreGrupo)) {
@@ -86,6 +88,19 @@ public class Agenda {
             return;
         }
         System.out.println("Contactos del grupo " + nombreGrupo);
+
+        boolean hayContacto = false;
+
+        for (Contacto contacto : listaContactos.values()) {
+            if (nombreGrupo.equals(contacto.getGrupo())) {
+                System.out.println("- " + contacto.toString());
+                hayContacto = true;
+            }
+        }
+
+        if (!hayContacto) {
+            System.out.println("No hay contactos asignados a este grupo aún.");
+        }
     }
 }
 

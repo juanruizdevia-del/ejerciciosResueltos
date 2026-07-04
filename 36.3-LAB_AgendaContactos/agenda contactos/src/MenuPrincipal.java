@@ -10,10 +10,12 @@ public class MenuPrincipal {
         int op = 0;
         while (op != 9) {
             System.out.println("=== AGENDA DE CONTACTOS ===");
+            System.out.println("--- Menu Contactos ---");
             System.out.println("1. Agregar contacto");
             System.out.println("2. Buscar contacto");
             System.out.println("3. Eliminar contacto");
             System.out.println("4. Listar todos los contactos");
+            System.out.println("--- Menu Grupos ---");
             System.out.println("5. Agregar grupo");
             System.out.println("6. Agregar contacto a grupo");
             System.out.println("7. Listar grupos");

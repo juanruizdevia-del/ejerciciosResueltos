@@ -5,6 +5,7 @@ public class Contacto {
     private String nombre;
     private String telefono;
     private String email;
+    private String grupo;
 
     // Constructor:
 
@@ -40,6 +41,10 @@ public class Contacto {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getGrupo() {return grupo;}
+
+    public void setGrupo(String grupo) {this.grupo = grupo;}
 
     // Metodo toString().
 
